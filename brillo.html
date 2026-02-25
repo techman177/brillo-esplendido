@@ -2,343 +2,220 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title>Brillo Espléndido | Hogar Fresco, Vida Relajante en Curazao</title>
-    <meta name="description" content="Servicios de limpieza profesional en Curazao. Especialistas en limpieza residencial, comercial y Airbnb. Schoonmaakbedrijf Curaçao.">
-    <meta name="keywords" content="cleaning services Curacao, limpieza Curacao, schoonmaakbedrijf Curaçao, Airbnb cleaning Curacao, janitorial services">
-    <meta name="author" content="Tu Nombre - Licencia Maestra">
-    
-    <meta property="og:title" content="Brillo Espléndido | Limpieza Profesional en Curazao">
-    <meta property="og:description" content="Hogar fresco, vida relajante. Servicio garantizado en toda la isla.">
-    <meta property="og:image" content="logo-color.png">
-    <meta property="og:type" content="website">
+    <title>BRILLO ESPLÉNDIDO | Limpieza Profesional en Curazao</title>
+    <meta name="description" content="Servicios premium de limpieza técnica en Curazao. Mantenimiento residencial, comercial y Airbnb.">
+    <meta name="author" content="Licencia Maestra">
 
     <style>
         /* ==============================================================
-           SISTEMA DE DISEÑO (BASADO EN LOGOS)
+           SISTEMA DE DISEÑO PROFESIONAL (SIN IMÁGENES EXTERNAS)
            ============================================================== */
         :root {
-            --azul-primario: #1a4a7a;    /* Azul de la gota de agua */
-            --azul-claro: #4a90e2;       /* Azul brillante */
-            --verde-acento: #8ec641;     /* Verde del anillo y destellos */
-            --verde-suave: #a8d5ba;      /* Tono relajante */
-            --blanco-puro: #ffffff;
-            --gris-limpieza: #f8fafc;    /* Color de fondo sanitario */
-            --negro-texto: #2d3436;
-            --shadow-premium: 0 15px 35px rgba(0,0,0,0.1);
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --azul-primario: #1a4a7a;
+            --azul-brillante: #4a90e2;
+            --verde-acento: #8ec641;
+            --blanco: #ffffff;
+            --gris-fondo: #f8fafc;
+            --gris-texto: #5a6b7d;
+            --negro-texto: #1e293b;
+            --shadow-premium: 0 20px 40px rgba(0,0,0,0.12);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        /* Reset General */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-
+        
         body { 
-            font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif; 
+            font-family: 'Segoe UI', system-ui, sans-serif; 
             color: var(--negro-texto); 
             line-height: 1.8;
-            background-color: var(--blanco-puro);
-            overflow-x: hidden;
+            background-color: var(--blanco);
         }
 
         /* ==============================================================
-           HEADER Y NAVEGACIÓN
+           HEADER: LOGOTIPO TIPOGRÁFICO (REEMPLAZA AL LOGO PNG)
            ============================================================== */
         header { 
-            background: var(--blanco-puro); 
-            padding: 20px 0; 
+            background: var(--blanco); 
+            padding: 40px 0; 
             text-align: center; 
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
+            position: sticky; 
+            top: 0; 
             z-index: 1000;
         }
-        .logo-container img { 
-            max-width: 250px; 
-            height: auto; 
-            transition: var(--transition);
-        }
-        .logo-container img:hover { transform: scale(1.02); }
 
-        /* ==============================================================
-           HERO SECTION (PRIMERA IMPRESIÓN)
-           ============================================================== */
-        .hero { 
-            background: linear-gradient(135deg, rgba(26, 74, 122, 0.85), rgba(142, 198, 65, 0.75)), 
-                        url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Efecto Parallax */
-            height: 85vh;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .hero h1 { 
-            font-size: clamp(2.5rem, 5vw, 4rem); 
-            margin-bottom: 15px; 
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        .logo-text {
+            display: inline-block;
+            font-size: 2.8rem;
+            font-weight: 900;
             letter-spacing: -1px;
+            line-height: 1;
         }
-        .hero p { 
+
+        .logo-brillo { color: var(--azul-primario); }
+        .logo-esplendido { 
+            color: var(--verde-acento); 
+            display: block; 
             font-size: 1.4rem; 
-            margin-bottom: 35px; 
-            max-width: 800px; 
-            font-weight: 300;
-            opacity: 0.95;
+            letter-spacing: 8px; 
+            margin-top: -5px;
+            text-indent: 8px;
         }
 
-        /* ==============================================================
-           SERVICIOS (GRID DINÁMICO)
-           ============================================================== */
-        .services-section { padding: 100px 10%; background: var(--gris-limpieza); }
-        .section-title { 
-            text-align: center; 
-            margin-bottom: 60px; 
-            color: var(--azul-primario);
-            font-size: 2.5rem;
+        /* HERO SECTION */
+        .hero { 
+            background: linear-gradient(135deg, rgba(26, 74, 122, 0.9), rgba(142, 198, 65, 0.8)), 
+                        url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center; 
+            height: 65vh; color: white; 
+            display: flex; flex-direction: column; justify-content: center;
+            align-items: center; text-align: center; padding: 0 20px;
         }
 
-        .services-grid { 
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+        .hero h2 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; opacity: 0.9; }
+
+        /* SERVICIOS CON PROTOCOLOS TÉCNICOS */
+        .services-section { padding: 100px 10%; background: var(--gris-fondo); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 40px; }
 
         .service-card { 
-            background: white; 
-            padding: 50px 30px; 
-            border-radius: 25px; 
-            box-shadow: var(--shadow-premium); 
-            text-align: center;
-            border-bottom: 6px solid transparent;
+            background: white; padding: 45px; border-radius: 30px; 
+            box-shadow: var(--shadow-premium);
+            border-bottom: 8px solid var(--verde-acento);
             transition: var(--transition);
         }
-        .service-card:hover { 
-            transform: translateY(-15px); 
-            border-bottom: 6px solid var(--verde-acento);
-        }
-        .service-card .icon-box { 
-            font-size: 50px; 
-            margin-bottom: 20px; 
-            display: block; 
-        }
-        .service-card h3 { 
-            color: var(--azul-primario); 
-            margin-bottom: 15px;
-            font-size: 1.6rem;
-        }
+        .service-card:hover { transform: translateY(-12px); }
 
-        /* ==============================================================
-           TESTIMONIOS (SOCIAL PROOF)
-           ============================================================== */
-        .testimonials-section { padding: 100px 10%; background: var(--blanco-puro); }
-        .testimonial-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-        }
-        .testimonial-box {
-            flex: 1;
-            min-width: 300px;
-            max-width: 500px;
-            padding: 40px;
-            background: var(--gris-limpieza);
-            border-radius: 20px;
-            position: relative;
-        }
-        .testimonial-box::before {
-            content: "“";
-            font-size: 80px;
-            color: var(--verde-acento);
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            opacity: 0.3;
-        }
-        .client-info { margin-top: 20px; font-weight: bold; color: var(--azul-primario); }
+        .service-card h4 { color: var(--azul-primario); font-size: 1.8rem; margin-bottom: 20px; text-align: center; }
 
-        /* ==============================================================
-           COTIZADOR INTELIGENTE
-           ============================================================== */
-        .quote-section { padding: 100px 10%; background: var(--azul-primario); color: white; }
-        .quote-card {
-            max-width: 700px;
-            margin: 0 auto;
-            background: white;
-            color: var(--negro-texto);
-            padding: 50px;
-            border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        .protocol-box { 
+            background: #f1f5f9; padding: 20px; border-radius: 15px; margin-bottom: 25px;
         }
-        .form-group { margin-bottom: 25px; }
-        .form-group label { display: block; margin-bottom: 10px; font-weight: 600; color: var(--azul-primario); }
-        .form-group input, .form-group select { 
-            width: 100%; padding: 15px; border: 2px solid #eee; border-radius: 12px; font-size: 1rem; outline: none;
-        }
-        .form-group input:focus { border-color: var(--verde-acento); }
+        .protocol-box p { font-weight: bold; font-size: 0.9rem; color: var(--azul-primario); margin-bottom: 10px; }
+        
+        .service-list { list-style: none; }
+        .service-list li { margin-bottom: 10px; padding-left: 25px; position: relative; font-size: 1rem; color: var(--gris-texto); }
+        .service-list li::before { content: '✔️'; position: absolute; left: 0; font-size: 0.8rem; }
 
-        /* ==============================================================
-           BOTONES Y ACCIONES
-           ============================================================== */
+        /* BOTONES Y FORMULARIO */
         .btn-main { 
-            background: var(--verde-acento); 
-            color: white; 
-            padding: 20px 45px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            border-radius: 60px; 
-            font-size: 1.2rem; 
-            display: inline-block;
-            box-shadow: 0 10px 20px rgba(142, 198, 65, 0.3);
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
+            background: var(--verde-acento); color: white; padding: 20px; 
+            text-decoration: none; font-weight: 800; border-radius: 50px; 
+            display: block; text-align: center; border: none; cursor: pointer;
+            transition: var(--transition); font-size: 1.1rem;
         }
-        .btn-main:hover { 
-            background: var(--azul-claro); 
-            transform: translateY(-3px);
-            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+        .btn-main:hover { background: var(--azul-primario); transform: scale(1.02); }
+
+        .quote-card { 
+            max-width: 700px; margin: 80px auto; background: white; padding: 50px; 
+            border-radius: 35px; box-shadow: 0 25px 50px rgba(0,0,0,0.1); 
         }
 
-        /* ==============================================================
-           FOOTER (LICENCIA MAESTRA)
-           ============================================================== */
-        footer { 
-            text-align: center; 
-            padding: 60px 20px; 
-            background: #111; 
-            color: white; 
-        }
-        .footer-logo { font-size: 1.8rem; font-weight: bold; margin-bottom: 10px; display: block; }
-        .footer-line { width: 50px; height: 3px; background: var(--verde-acento); margin: 20px auto; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: var(--azul-primario); }
+        .form-group input, .form-group select { width: 100%; padding: 15px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 1rem; }
 
-        /* Ajustes para móviles */
+        footer { text-align: center; padding: 60px; background: #0f172a; color: white; }
+
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .services-section, .quote-section { padding: 60px 5%; }
-            .quote-card { padding: 30px; }
+            .logo-text { font-size: 2.2rem; }
+            .logo-esplendido { font-size: 1.1rem; letter-spacing: 5px; }
+            .services-section { padding: 60px 5%; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <img src="logo-color.png" alt="Brillo Espléndido Logo">
+        <div class="logo-text">
+            <span class="logo-brillo">BRILLO</span>
+            <span class="logo-esplendido">ESPLÉNDIDO</span>
         </div>
     </header>
 
     <section class="hero">
-        <h1>Hogar Fresco, Vida Relajante</h1>
-        <p>Expertos en limpieza profesional que transforman espacios en el paraíso de Curazao.</p>
-        <a href="#cotizador" class="btn-main">¡Cotizar Ahora!</a>
+        <h2>Excelencia en cada Rincón</h2>
+        <p>Limpieza técnica profesional en Curazao con estándares de hotel 5 estrellas.</p>
     </section>
 
     <section class="services-section">
-        <h2 class="section-title">Nuestros Servicios Especializados</h2>
         <div class="services-grid">
             <div class="service-card">
-                <span class="icon-box">🏠</span>
-                <h3>Limpieza Residencial</h3>
-                <p>Mantenimiento profundo de villas, casas y apartamentos con productos de alta gama.</p>
-            </div>
-            <div class="service-card">
-                <span class="icon-box">🏢</span>
-                <h3>Espacios Comerciales</h3>
-                <p>Oficinas y locales comerciales impecables para proyectar confianza a sus clientes.</p>
-            </div>
-            <div class="service-card">
-                <span class="icon-box">🏖️</span>
-                <h3>Gestión de Airbnb</h3>
-                <p>Limpieza exprés y detallada (Turnover) para garantizar reseñas de 5 estrellas.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials-section">
-        <h2 class="section-title">Clientes Satisfechos</h2>
-        <div class="testimonial-wrapper">
-            <div class="testimonial-box">
-                "El mejor servicio de limpieza en Curazao. Puntuales, detallistas y el olor a limpio después de que terminan es increíble."
-                <div class="client-info">Elena R. - Jan Thiel Resident</div>
-            </div>
-            <div class="testimonial-box">
-                "Nos ayudan con el mantenimiento de nuestras oficinas en Punda y el cambio es notable. Muy profesionales."
-                <div class="client-info">Marco V. - Director Comercial</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="cotizador" class="quote-section">
-        <div class="quote-card">
-            <h2 style="text-align:center; margin-bottom: 30px; color: var(--azul-primario);">Solicitar Presupuesto</h2>
-            <form id="formBrillo">
-                <div class="form-group">
-                    <label>Tipo de Servicio Requerido</label>
-                    <select id="tipoServicio">
-                        <option value="Residencial">Limpieza de Hogar</option>
-                        <option value="Comercial">Limpieza de Oficina / Local</option>
-                        <option value="Airbnb">Limpieza Airbnb / Vacacional</option>
-                        <option value="Profunda">Limpieza Profunda (Deep Clean)</option>
-                    </select>
+                <h4>🏠 Residencial</h4>
+                <div class="protocol-box">
+                    <p>INCLUYE:</p>
+                    <ul class="service-list">
+                        <li>Desinfección de baños y cocinas.</li>
+                        <li>Limpieza de ventanales y rieles.</li>
+                        <li>Tratamiento de pisos y polvo.</li>
+                    </ul>
                 </div>
+                <a href="#cotizar" class="btn-main">Más Información</a>
+            </div>
+
+            <div class="service-card">
+                <h4>🏢 Oficinas</h4>
+                <div class="protocol-box">
+                    <p>INCLUYE:</p>
+                    <ul class="service-list">
+                        <li>Sanitización de equipos y mesas.</li>
+                        <li>Limpieza de áreas comunes.</li>
+                        <li>Mantenimiento de vidrios.</li>
+                    </ul>
+                </div>
+                <a href="#cotizar" class="btn-main">Más Información</a>
+            </div>
+
+            <div class="service-card">
+                <h4>🏖️ Airbnb turnover</h4>
+                <div class="protocol-box">
+                    <p>INCLUYE:</p>
+                    <ul class="service-list">
+                        <li>Montaje de lencería hotelera.</li>
+                        <li>Check-list de daños técnicos.</li>
+                        <li>Reposición de suministros.</li>
+                    </ul>
+                </div>
+                <a href="#cotizar" class="btn-main">Más Información</a>
+            </div>
+        </div>
+
+        <div id="cotizar" class="quote-card">
+            <h3 style="text-align:center; color: var(--azul-primario); margin-bottom:30px;">Presupuesto WhatsApp</h3>
+            <form>
                 <div class="form-group">
-                    <label>Número de Habitaciones / Áreas</label>
-                    <input type="number" id="numAreas" placeholder="Ej: 4" min="1">
+                    <label>Servicio</label>
+                    <select id="serv_t"><option>Residencial</option><option>Oficinas</option><option>Airbnb</option></select>
                 </div>
                 <div class="form-group">
                     <label>Tu Nombre</label>
-                    <input type="text" id="nombreCliente" placeholder="¿A quién contactamos?">
+                    <input type="text" id="nom_t" placeholder="Ej: Juan Pérez">
                 </div>
-                <button type="button" onclick="enviarWhatsApp()" class="btn-main" style="width: 100%;">
-                    Enviar Solicitud vía WhatsApp 📱
-                </button>
+                <button type="button" onclick="sendWA()" class="btn-main">Enviar Solicitud 📱</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <span class="footer-logo">Brillo Espléndido</span>
-        <p>Curazao, Caribe Neerlandés</p>
-        <p>Teléfono: +599 9 520 1740</p>
-        <div class="footer-line"></div>
-        <p style="font-size: 0.8rem; opacity: 0.5;">
-            &copy; 2026 Brillo Espléndido. Todos los derechos reservados.<br>
-            Desarrollado bajo Licencia Maestra - Sin rastros de Nexus/Nayeli.
-        </p>
+        <p><strong>BRILLO ESPLÉNDIDO - CURAZAO</strong></p>
+        <p>+599 9 520 1740</p>
+        <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.5;">© 2026 Licencia Maestra</p>
     </footer>
 
     <script>
-        function enviarWhatsApp() {
-            // Captura de datos del formulario
-            const servicio = document.getElementById('tipoServicio').value;
-            const areas = document.getElementById('numAreas').value;
-            const nombre = document.getElementById('nombreCliente').value;
-            
-            // Configuración del número (Curazao)
-            const numeroTel = "59995201740"; 
-            
-            // Construcción del mensaje profesional
-            const mensaje = `*SOLICITUD DE SERVICIO - BRILLO ESPLÉNDIDO*%0A` +
-                            `------------------------------------------%0A` +
-                            `✨ *Cliente:* ${nombre || 'Interesado'}%0A` +
-                            `🛠 *Servicio:* ${servicio}%0A` +
-                            `🏠 *Áreas:* ${areas}%0A` +
-                            `------------------------------------------%0A` +
-                            `_Enviado desde el sitio web oficial de Curazao._`;
-            
-            // Ejecución de la apertura de WhatsApp
-            window.open(`https://wa.me/${numeroTel}?text=${mensaje}`, '_blank');
+        function sendWA() {
+            const s = document.getElementById('serv_t').value;
+            const n = document.getElementById('nom_t').value;
+            const tel = "59995201740";
+            const msg = `*BRILLO ESPLÉNDIDO*%0ACliente: ${n}%0AServicio: ${s}%0A_Solicito inspección técnica._`;
+            window.open(`https://wa.me/${tel}?text=${msg}`, '_blank');
         }
     </script>
-
 </body>
 </html>
